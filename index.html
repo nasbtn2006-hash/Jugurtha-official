@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugurtha — Forged in Heritage.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Brand Colors */
+        :root {
+            --bg-color: #050505; /* Deep Black to match logo */
+            --text-main: #EAE6D7; /* Warm Sand */
+            --accent: #A85C42; /* Terracotta */
+            --stone: #1A1A1A; /* Dark Stone for cards */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            border-bottom: 1px solid rgba(234, 230, 215, 0.1);
+        }
+
+        .logo-container img {
+            height: 60px; /* Scales the logo cleanly */
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 8rem 5% 6rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #A09D94;
+            margin-bottom: 3rem;
+        }
+
+        .cta-btn {
+            background-color: var(--accent);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: #8a4a35;
+        }
+
+        /* Manifesto / Brand Story */
+        .manifesto {
+            background-color: var(--stone);
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .manifesto-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .manifesto h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .manifesto p {
+            font-size: 1.05rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+
+        /* Featured Drop */
+        .drop-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .drop-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(234, 230, 215, 0.1);
+            padding-bottom: 1rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .product-card {
+            background-color: var(--stone);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-placeholder {
+            width: 100%;
+            height: 350px;
+            background-color: #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #555;
+            font-family: 'Cinzel', serif;
+        }
+
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: #A09D94;
+            margin-bottom: 1.5rem;
+        }
+
+        .urgency {
+            color: var(--accent);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 5% 2rem;
+            border-top: 1px solid rgba(234, 230, 215, 0.1);
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .domain {
+            margin-top: 2rem;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 1px;
+            color: #A09D94;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
+            .drop-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <a href="#">
+                <img src="https://i.ibb.co/Pvpxgddg/logo.jpg" alt="Jugurtha Official Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#drop">The Archive</a></li>
+                <li><a href="#manifesto">Heritage</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>FORGED IN HERITAGE.<br>WORN AS ARMOR.</h1>
+        <p>Exclusive garments engineered from premium materials. Rooted in the geometry and strength of regional architecture.</p>
+        <a href="#drop" class="cta-btn">Access Drop 001</a>
+    </section>
+
+    <section id="manifesto" class="manifesto">
+        <div class="manifesto-content">
+            <h2 class="brand-font">OUR FOUNDATION</h2>
+            <p>Jugurtha bridges the gap between historical permanence and modern independence.</p>
+            <p>Drawing direct inspiration from timeless architectural landmarks, our silhouettes are designed to endure. Conceived and designed in Algiers, we reject mass production in favor of absolute exclusivity and structural integrity.</p>
+        </div>
+    </section>
+
+    <section id="drop" class="drop-section">
+        <div class="drop-header">
+            <h2 class="brand-font">DIMENSIONAL DROP 001</h2>
+            <p class="urgency">Strictly Limited Stock</p>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-placeholder">Product Visual</div>
+                <div class="product-info">
+                    <h3 class="brand-font">The Architect Heavyweight Tee</h3>
+                    <p>Woven from 100% premium Egyptian cotton for a structured, enduring fit.</p>
+                    <a href="#" class="cta-btn" style="padding: 0.8rem 1.5rem; font-size: 0.8rem;">View Details</a>
+                    <span class="urgency">When sold out, it will not be restocked</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-placeholder">Product Visual</div>
+                <div class="product-info">
+                    <h3 class="brand-font">Heritage Cargo Trouser</h3>
+                    <p>Tailored utility referencing classic terracotta lines and deep stone tones.</p>
+                    <a href="#" class="cta-btn" style="padding: 0.8rem 1.5rem; font-size: 0.8rem;">View Details</a>
+                    <span class="urgency">When sold out, it will not be restocked</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-logo brand-font">JUGURTHA</div>
+        <p>Subscribe for 48-hour early access to future drops.</p>
+        <div class="domain">
+            <p>www.jugurthaofficial.com</p>
+            <p style="margin-top: 1rem; font-size: 0.75rem;">&copy; 2026 Jugurtha Official. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
